@@ -51,25 +51,33 @@ h1{
 label{
     cursor: pointer;
 }
-.bayan-wrapper:hover .item-head svg{
-    opacity: 1;
-}
-input:checked + label .item-head svg,
-label:hover .item-head img{
+
+input:checked + label .item-head svg{
     transform: rotate(0);
 }
-input:checked + label .item-body,
-label:hover .item-body{
+input:checked + label .item-body{
     max-height: 150vh;
 }
-input:checked + label .item-head,
-.bayan-wrapper:hover .item-head{
+input:checked + label .item-head{
     color: #333;
 }
 input:active + label .item-head{
     color: #0091c8!important;
 }
-
+@media (hover: hover) {
+    .bayan-wrapper:hover .item-head{
+        color: #333;
+    }
+    label:hover .item-body{
+        max-height: 150vh;
+    }
+    label:hover .item-head svg{
+        transform: rotate(0);
+    }
+    .bayan-wrapper:hover .item-head svg{
+        opacity: 1;
+    }
+  }
 @media (min-width:991px){
     label{
         cursor: pointer;
